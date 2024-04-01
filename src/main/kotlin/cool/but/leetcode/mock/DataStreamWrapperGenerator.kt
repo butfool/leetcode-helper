@@ -1,4 +1,4 @@
-package cool.but.leetcode.common.mock
+package cool.but.leetcode.mock
 
 import java.util.stream.Stream
 
