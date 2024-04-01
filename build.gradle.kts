@@ -1,0 +1,23 @@
+plugins {
+    kotlin("jvm") version "1.9.23"
+}
+
+group = "cool.but"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.junit.jupiter:junit-jupiter")
+    implementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
+}
