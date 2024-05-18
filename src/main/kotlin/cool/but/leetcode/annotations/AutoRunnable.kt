@@ -1,6 +1,6 @@
 package cool.but.leetcode.common.annotations
 
-import cool.but.leetcode.common.provider.AutoRunnableArgumentProvider
+import cool.but.leetcode.provider.AutoRunnableArgumentProvider
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ArgumentsSource
 

@@ -1,5 +1,6 @@
-import cool.but.leetcode.mock.MockContext
+import cool.but.leetcode.common.annotations.AutoRunnable
 import org.junit.jupiter.api.Test
+import java.util.*
 
 /**
  * Description <br>
@@ -12,13 +13,13 @@ import org.junit.jupiter.api.Test
  * @since V8.1E <br>
  */
 class MockContextTest {
-    @Test
-    fun testBasic() {
-        println(MockContext.mock(Int::class.java))
+    @AutoRunnable
+    fun testBasic(a:Int, b: Double) {
+        println("$a, $b")
     }
 
-    @Test
-    fun testArray() {
-        println(MockContext.mock(Array::class.java))
+    @AutoRunnable
+    fun testArray(a: List<Int>) {
+        println(a)
     }
 }

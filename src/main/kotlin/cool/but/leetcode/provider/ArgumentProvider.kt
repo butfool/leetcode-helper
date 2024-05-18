@@ -1,7 +1,7 @@
-package cool.but.leetcode.common.provider
+package cool.but.leetcode.provider
 
+import com.github.jsonzou.jmockdata.JMockData
 import cool.but.leetcode.common.annotations.AutoRunnable
-import cool.but.leetcode.mock.MockContext
 import org.junit.jupiter.api.extension.ExtensionContext
 import org.junit.jupiter.params.provider.AnnotationBasedArgumentsProvider
 import org.junit.jupiter.params.provider.Arguments
@@ -19,7 +19,7 @@ class AutoRunnableArgumentProvider : AnnotationBasedArgumentsProvider<AutoRunnab
         parameters.forEach {
             println(it.type)
             result.add(
-                MockContext.mock(it.type)
+                JMockData.mock(it.type)
             )
         }
         return Stream.of(Arguments.of(*(result.toArray())))
